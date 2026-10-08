@@ -1,4 +1,4 @@
-.exe
-.lps
+*.exe
+*.lps
 lib/
 backup/
