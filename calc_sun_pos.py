@@ -4,7 +4,7 @@ from astral import LocationInfo
 from astral.location import Location
 
 def get_sun_position(timestamp): # Kan findes hvis man søger på UNIX timestamp (Sekunder siden 1970 1 januar)
-    loc = LocationInfo("Solar", "Denmark", "Europe", 55.757, 8.932)
+    loc = LocationInfo("Solar", "Denmark", "Europe", 55.753, 8.920)
     target_time = datetime.fromtimestamp(timestamp, timezone.utc)
     location = Location(loc)
     az = location.solar_azimuth(target_time) # Grader med uret fra nord (horisontalt)
