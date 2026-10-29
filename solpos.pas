@@ -5,7 +5,7 @@ unit Solpos;
 interface
 
 uses
-  Classes, SysUtils, Process;
+  Classes, SysUtils, Process, DateUtils;
 
 type
   { TSolPosClock }
@@ -63,7 +63,7 @@ var
   Fs: TFormatSettings;
 begin
   // Convert TDateTime to Unix Timestamp
-  UnixTimestamp := Round((FCurrentTime - 25569.0) * 86400.0);
+  UnixTimestamp := Round((LocalTimeToUniversal(FCurrentTime) - 25569.0) * 86400.0);
 
   // Initialize objects safely outside the protected blocks
   Process := TProcess.Create(nil);
