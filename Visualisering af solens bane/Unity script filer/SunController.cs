@@ -8,18 +8,13 @@ public class SunController : MonoBehaviour
     public float dayLengthInSeconds = 120f;
 
     [Header("Seasonal Settings")]
-    public float currentDayOfYear = 180f; // Default near summer solstice
+    public float currentDayOfYear = 180f; 
     private int actualDay = 180;
     public float maxAxialTilt = 23.5f;
 
     [Header("Location Settings")]
     public float latitude = 40f;
 
-
-    void Start()
-    {
-
-    }
 
     void Update()
     {
